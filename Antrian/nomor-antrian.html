@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Halaman Antrian Klinik</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #06fb27;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(4, 247, 33, 0.1);
+      margin-top: 100px;
+      text-align: center;
+    }
+
+  .form-group input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 3px;
+    border: 1px solid #07f838;
+    margin-bottom: 10px;
+  }
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    .queue-number {
+      font-size: 24px;
+      font-weight: bold;
+      color: #4CAF50;
+      margin-bottom: 20px;
+    }
+
+    .message {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Pengambilan Tiket Antrian</h2>
+    <form id="queue-form">
+      <div class="form-group">
+        <label for="name">Nama:</label>
+        <input type="text" id="name" name="name" placeholder="Masukkan nama">
+      </div>
+      <div class="form-group">
+        <label for="phone">Nomor Telepon:</label>
+        <input type="tel" id="phone" name="phone" placeholder="Masukkan nomor telepon">
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Masukkan alamat email">
+      </div>
+      <div class="form-group">
+        <button type="submit">Ambil Tiket</button>
+      </div>
+    </form>
+    <div id="queue-info" style="display: none;">
+      <p class="queue-number"></p>
+      <p class="message"></p>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('queue-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      // Mendapatkan nilai input dari pengguna
+      var name = document.getElementById('name').value;
+      var phone = document.getElementById('phone').value;
+      var email = document.getElementById('email').value;
+
+      // Mengirim data antrian ke server (simulasi)
+      // Di sini, Anda dapat mengirim permintaan ke server untuk memproses data antrian dan mendapatkan nomor antrian pengguna
+
+      // Simulasi nomor antrian
+      var queueNumber = Math.floor(Math.random() * 100) + 1;
+
+      // Menampilkan nomor antrian dan pesan kepada pengguna
+      document.querySelector('.queue-number').textContent = 'Nomor Antrian Anda: ' + queueNumber;
+      document.querySelector('.message').textContent = 'Terima kasih, ' + name + '! Silakan menunggu giliran Anda.';
+      
+      // Menampilkan informasi antrian
+      document.getElementById('queue-info').style.display = 'block';
+    });
+  </script>
+</body>
+</html>
