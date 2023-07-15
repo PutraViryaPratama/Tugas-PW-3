@@ -1,0 +1,51 @@
+nav .logo img{
+    width: 20%; 
+   
+}
+nav .logo{
+    align-items: center;
+    justify-content: center;
+    
+}
+nav .logo .sp1{
+   position: absolute;
+   line-height: 60px;
+   margin-left: 10px;
+   font-weight: bolder;
+}
+
+nav{
+    display: flex;
+    background-color: rgba(172, 255, 47, 0.723);
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+nav ul{
+    list-style-type: none;
+    
+}
+nav li{
+    display: flex;
+    
+}
+
+nav li a{
+    background-color:rgba(128, 128, 128,0.600);
+    text-decoration: none;
+    padding: 20px;
+    color: black;
+    position: relative;
+    justify-content: space-evenly;
+}
+a:hover{
+    background-color: aqua;
+    border-radius: 20px;
+    
+}
+nav .lol p{
+    display: inline;
+    position: absolute;
+    transform: translate(5px,-10px);
+    
+}

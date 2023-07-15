@@ -84,6 +84,14 @@ main .about p{
     display: flex;
     flex-direction: column;
 }
+footer{
+    background-color: rgba(0, 0, 0, 0.714);
+    height: 25vh;
+    width: 100%;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+}
 
 
 @media (max-width:800px) {
